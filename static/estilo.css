@@ -1,0 +1,87 @@
+p{
+    color:white;
+    background-color: red;
+    padding: 10px;
+    margin: 10px 50px 20px 100px;
+    border-style: solid;
+    border-color: #286914;
+    border-width: 0px;
+    text-align: justify;
+    font-size: x-large;
+}
+
+
+div{
+    background-color: red;
+    padding: 10px;
+    margin: 10px 50px 20px 100px;
+    border-style: solid;
+    border-color: #286914;
+    border-width: 0px;
+    text-align: justify;
+    font-size: x-large;
+}
+
+h1{
+    color:white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: red;
+    border-style: solid;
+    border-color: #286914;
+    border-width: 0px;
+    font-size: xx-large;
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-weight: bold;
+    color: white;
+    background-color:red;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 3px;
+    text-align:left;
+    width: 100px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h3:hover{
+    background-color: seagreen;
+}
+
+h2{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px;
+    text-align:left;
+    padding: 5px;
+    margin: 25px 50px 2px 100px;
+}
+
+body{
+    background-color:black;
+}
+
+img{
+    width: 100%; 
+}
+
+#DC{
+    background-color: red;
+    padding: 10px;
+    margin: 10px 50px 20px 100px;
+    border-style: solid;
+    border-color: #286914;
+    border-width: 0px;
+    text-align: justify;
+    font-size: x-large;
+}
