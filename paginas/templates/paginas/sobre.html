@@ -1,18 +1,6 @@
+{% extends 'paginas/index.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
-
-    <link rel="shortcut icon" href="{% static 'imagens/favicon.png'%}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'estilo.css' %}">
-</head>
-
-<body>
+{% block conteudo %}
     <h1>SOBRE</h1>
     <h2>DESCRIÇÃO DO PROJETO</h2>
     <p>O projeto idealizado pelos estudantes Gabrielen Silva de Abreu e Rafael Malaquias Azevedo, tem a premissa de
@@ -28,14 +16,11 @@
 
     <h2>DIAGRAMA DE CASOS DE USO DO PROJETO</h2>
     <div>
-        <img src="{% static 'imagens/DCU.jpeg'%}">
+        <img class ='.img-fluid'  src="{% static 'imagens/DCU.jpeg'%}">
     </div>
 
     <h2>DIAGRAMA DE CLASSES DO PROJETO</h2>
     <div id="DC">
-        <img src="{% static 'imagens/DC.jpeg'%}">
+        <img class ='.img-fluid' src="{% static 'imagens/DC.jpeg'%}">
     </div>
-        
-</body>
-
-</html>
+ {% endblock %}    
