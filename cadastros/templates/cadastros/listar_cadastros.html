@@ -1,0 +1,32 @@
+{% extends 'paginas/index.html' %}
+{% load static %}
+{% block conteudo %}
+<a href="{% url 'cadastrar-nutriente' %}" class="btn btn-danger btn-sm">Cadastrar</a>
+<table class="table table-striped">
+
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Opções</th>
+    </tr>
+
+    {% for nutriente in object_list %}
+    
+    <tr>
+        <td>{{nutriente.pk}}</td>
+        <td>{{nutriente.nome}}</td>
+        <td>
+            <a href="{% url 'atualizar-nutriente' nutriente.pk %}" class="btn btn-warning btn-sm">Editar</a>
+            <a href="{% url 'deletar-nutriente' nutriente.pk %}" class="btn btn-warning btn-sm"> Excluir </a>
+          
+        </td>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <td colspan="3">Nenhum registro encontrado</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}
