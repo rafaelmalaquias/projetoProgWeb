@@ -1,8 +1,24 @@
 {% extends 'paginas/index.html' %}
 {% load static %}
 {% block conteudo %}
-<div>
-    <h3> Pagina Inicial</h3>
+
+<div class="px-4 py-5 my-5 text-center bg-light has-bg-img">
+        
+        <h1 class="display-2 fw-bold">Seja bem-vindo ao nosso projeto!</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Seja bem vindo a nossa calculadora de calorias, aqui você poderá diariamente calcular
+                todas as suas calorias, sem dores de cabeça, e com muita
+                rapidez. Não se esqueça que é primordial que primeiro se cadastre em nosso site, e o complemente com suas informações, bom apetite!
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class = "btn btn-primary" href="http://127.0.0.1:8000/listar/refeicao/" >Começar a calcular as calorias</a>
+                <a class= "btn btn-primary" href ="http://127.0.0.1:8000/registrar/ "  >Realizar o cadastro no site</a>
+            </div>
+        </div>
+        
+
 </div>
+<div class="b-example-divider"></div>
+
 
 {% endblock %}
