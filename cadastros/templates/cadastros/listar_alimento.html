@@ -1,0 +1,41 @@
+{% extends 'paginas/index.html' %}
+{% load static %}
+{% block conteudo %}
+<a href="{% url 'cadastrar-alimento' %}" class="btn btn-danger btn-sm">Cadastrar</a>
+<table class="table table-striped">
+
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Porção</th>
+        <th>Valor Calórico</th>
+        <th>Categoria</th>
+        <th>Nutriente</th>
+    </tr>
+   
+
+    {% for alimento in object_list %}
+
+    <tr>
+        <td>{{alimento.pk}}</td>
+        <td>{{alimento.nome}}</td>
+        <td>{{alimento.porcao}}</td>
+        <td>{{alimento.valor_calorico}}</td>
+        <td>{{alimento.categoria}}</td>
+        <td>{{alimento.nutriente}}</td>
+        
+        <td>
+            <a href="{% url 'atualizar-alimento' alimento.pk %}" class="btn btn-warning btn-sm">Editar</a>
+            <a href="{% url 'deletar-alimento' alimento.pk %}" class="btn btn-warning btn-sm"> Excluir </a>
+
+        </td>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <td colspan="3">Nenhum registro encontrado</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

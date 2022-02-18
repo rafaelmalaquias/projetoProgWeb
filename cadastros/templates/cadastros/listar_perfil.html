@@ -1,0 +1,42 @@
+{% extends 'paginas/index.html' %}
+{% load static %}
+{% block conteudo %}
+<a href="{% url 'cadastrar-perfil' %}" class="btn btn-danger btn-sm">Cadastrar</a>
+<table class="table table-striped">
+
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Data de Nascimento</th>
+        <th>Altura</th>
+        <th>Peso</th>
+        <th>Telefone</th>
+        <th>Opções</th>
+    </tr>
+
+    {% for perfil in object_list %}
+
+    <tr>
+        <td>{{perfil.pk}}</td>
+        <td>{{perfil.nome}}</td>
+        <td>{{perfil.sobrenome}}</td>
+        <td>{{perfil.data_nasc}}</td>
+        <td>{{perfil.altura}}</td>
+        <td>{{perfil.peso}}</td>
+        <td>{{perfil.telefone}}</td>
+        <td>
+            <a href="{% url 'atualizar-perfil' perfil.pk %}" class="btn btn-warning btn-sm">Editar</a>
+            <a href="{% url 'deletar-perfil' perfil.pk %}" class="btn btn-warning btn-sm"> Excluir </a>
+
+        </td>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <td colspan="3">Nenhum registro encontrado</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

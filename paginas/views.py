@@ -10,4 +10,7 @@ class PaginaInicial(TemplateView):
 
 class Sobre(TemplateView):
     template_name = 'paginas/sobre.html'
+
+class Inicio(TemplateView):
+    template_name = 'paginas/inicio.html'
 # Create your views here.

@@ -1,0 +1,32 @@
+{% extends 'paginas/index.html' %}
+{% load static %}
+{% block conteudo %}
+<a href="{% url 'cadastrar-sac' %}" class="btn btn-danger btn-sm">Cadastrar</a>
+<table class="table table-striped">
+
+    <tr>
+        <th>ID</th>
+        <th>Mensagem</th>
+        <th>Opções</th>
+    </tr>
+
+    {% for sac in object_list %}
+
+    <tr>
+        <td>{{sac.pk}}</td>
+        <td>{{sac.mensagem}}</td>
+        <td>
+            <a href="{% url 'atualizar-sac' sac.pk %}" class="btn btn-warning btn-sm">Editar</a>
+            <a href="{% url 'deletar-sac' sac.pk %}" class="btn btn-warning btn-sm"> Excluir </a>
+
+        </td>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <td colspan="3">Nenhum registro encontrado</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}
